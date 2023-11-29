@@ -35,7 +35,7 @@ int main(int argc, char* argv[])
     else
     {
         // main 함수에 추가 인자가 전달된 경우 argv[1] 문자열로 디렉터리 스트림을 열어 디렉터리 포인터 변수에 담아줌
-        if((dir = opendir(argv[1])==NULL))
+        if((dir=opendir(argv[1]))==NULL)
         {
             printf("directory open error\n");
             exit(1);
