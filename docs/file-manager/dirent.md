@@ -77,7 +77,15 @@ opendir() 함수는 매개변수 dirname에 해당하는 디렉터리 스트림�
 
 ### readdir
 
+```C
+#include <unistd.h>
+#include <linux/dirent.h>
+#include <linux/unistd.h>
 
+int readdir(unsigned int fd, struct dirent *dirp, unsigned int count);
+```
+
+위 함수는 예전 커널시스템 콜 인터페이스를 위해 manual에 존재하는 내용이며, 위 함수의 사용은 `getdents()`로 대체되었다고 한다. (다만 대부분의 ls 프로그램에서는 `readdir()`을 많이 쓴다고 ㅋㅋ). `readdir()` 함수는 파일 서술자 `fd`에 의해 지목된 디렉터리에서 `dirp`에 의해 포인트된 메모리 지역에 있는 `dirent` 구조체를 읽어, `DIR*`에 저장한다. `count`는 무시된다.
 
 ## 출처
 https://velog.io/@eeunnii/%EC%8A%A4%ED%8A%B8%EB%A6%BC
