@@ -1,6 +1,6 @@
-# ffi_test
+# linux_terminal_example
 
-A new Flutter project.
+Demonstrates how to use the linux_terminal plugin.
 
 ## Getting Started
 
