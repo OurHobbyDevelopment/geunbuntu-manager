@@ -21,3 +21,5 @@ FFI_PLUGIN_EXPORT intptr_t sum_long_running(intptr_t a, intptr_t b) {
 #endif
   return a + b;
 }
+
+FFI_PLUGIN_EXPORT intptr_t minus(intptr_t a, intptr_t b) { return a - b; }

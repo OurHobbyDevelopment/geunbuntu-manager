@@ -28,3 +28,5 @@ FFI_PLUGIN_EXPORT intptr_t sum(intptr_t a, intptr_t b);
 // block Dart execution. This will cause dropped frames in Flutter applications.
 // Instead, call these native functions on a separate isolate.
 FFI_PLUGIN_EXPORT intptr_t sum_long_running(intptr_t a, intptr_t b);
+
+FFI_PLUGIN_EXPORT intptr_t minus(intptr_t a, intptr_t b);

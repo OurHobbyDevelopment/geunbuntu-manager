@@ -67,4 +67,19 @@ class LinuxTerminalBindings {
           'sum_long_running');
   late final _sum_long_running =
       _sum_long_runningPtr.asFunction<int Function(int, int)>();
+
+  int minus(
+    int a,
+    int b,
+  ) {
+    return _minus(
+      a,
+      b,
+    );
+  }
+
+  late final _minusPtr =
+      _lookup<ffi.NativeFunction<ffi.IntPtr Function(ffi.IntPtr, ffi.IntPtr)>>(
+          'minus');
+  late final _minus = _minusPtr.asFunction<int Function(int, int)>();
 }
